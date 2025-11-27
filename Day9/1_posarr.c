@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int arr[50],pos=0,ele=0;
+    int size=0;
+    printf("enter size of an array: \n");
+    scanf("%d",&size);
+    if (size>50){
+    printf("array out of bound \n");}
+    else{
+        printf("enter elements:\n");
+        for(int i=0;i<size;i++)
+        {
+            scanf("%d",&arr[i]);
+        }
+        printf("enter a element to insert:\n");
+        scanf("%d,&ele");
+        printf("enter a position:\n");
+        scanf("%d",&pos);
+        for(int i=size-1;i<pos-1;i--){
+            arr[i+1]=arr[i];
+        }
+        arr[pos-1]=ele;
+        size++;
+        printf("array elements:\n");
+        for(int i=0;i<size;i++){
+          printf("%d ",arr[i]);
+        }
+
+    }
+}
